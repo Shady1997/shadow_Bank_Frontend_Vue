@@ -135,7 +135,7 @@ Ensure your Spring Boot `CorsConfig.java` allows requests from Vue:
 
 ```java
 corsConfiguration.setAllowedOrigins(Arrays.asList(
-    "http://localhost:3000"  // Vue development server (Vite default)
+    "http://localhost:8003"  // Vue development server (Vite default)
 ));
 ```
 
@@ -147,7 +147,7 @@ npm run dev
 
 The application will start on:
 ```
-http://localhost:3000
+http://localhost:8003
 ```
 
 ## Running the Application
@@ -157,7 +157,7 @@ http://localhost:3000
    mvn spring-boot:run
    ```
 
-2. **Start Vue Frontend** (Port 3000)
+2. **Start Vue Frontend** (Port 8003)
    ```bash
    npm run dev
    ```
@@ -166,7 +166,7 @@ http://localhost:3000
    
    Open your browser and navigate to:
    ```
-   http://localhost:3000
+   http://localhost:8003
    ```
 
 ## Login
@@ -246,12 +246,12 @@ Troubleshooting
 CORS Errors
 If you encounter CORS errors, ensure:
 
-Spring Boot CORS configuration includes http://localhost:3000
+Spring Boot CORS configuration includes http://localhost:8003
 Backend is running on port 8083
 Restart both frontend and backend
 
 Port Already in Use
-If port 3000 is already in use, update vite.config.js:
+If port 8003 is already in use, update vite.config.js:
 javascriptexport default defineConfig({
   server: {
     port: 3001, // Change to any available port
